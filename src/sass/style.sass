@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap')
+@import "mixins.sass"
+
+body
+    background-color: #e7ecef
+    margin: auto
+    overflow: hidden
+
+.left-side
+    background-color: #272932
+    color: #e7ecef
+    left: 0
+    position: fixed
+    width: 100%
+    height: 100%
+    margin: 0
+    font-family: Inter
+    a#heading
+        @include heading()
+        width: 100%
+        padding: 5px
+    .container
+        // position: absolute
+        // top: 200px
+    a#main
+        white-space: nowrap
+        display: block
+        padding: 10px
+        font-weight: 500
+        font-size: 20px
+    @media(min-width: 1024px)
+        font-size: 150px
+    @media(max-width: 1023px)
+        font-size: 60px
+
+.right-side
+    background-color: #e7ecef
+    z-index: 1
+    right: 0
+    position: fixed
+    color: #272932
+    height: 100%
+    font-family: Inter
+    animation: position 1.5s
+
+    .container
+        animation: opacity 2.5s
+
+    a#heading
+        @include heading()
+        float: left
+        padding: 5px
+
+    @keyframes opacity
+        0%
+            opacity: 0
+        50%
+            opacity: 0
+        100%
+            opacity: 1
+    @media(min-width: 1024px)
+        width: 85%
+        font-size: 150px
+        @keyframes position
+            0%
+                width: 100%
+            100%
+                width: 85%
+    @media(max-width: 1023px)
+        width: 63%
+        font-size: 60px
+        @keyframes position
+            0%
+                width: 100%
+            100%
+                width: 63%
