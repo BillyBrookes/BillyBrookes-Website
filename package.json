@@ -24,7 +24,6 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
-    "sass": "^1.49.8",
-    "sass-google-fonts": "^1.0.1"
+    "sass": "^1.49.8"
   }
 }
