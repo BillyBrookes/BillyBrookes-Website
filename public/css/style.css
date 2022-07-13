@@ -21,21 +21,28 @@ body {
   width: 100%;
   padding: 5px;
 }
-.left-side a#main {
-  white-space: nowrap;
-  display: block;
-  padding: 10px;
-  font-weight: 500;
-  font-size: 20px;
-}
 @media (min-width: 1024px) {
   .left-side {
     font-size: 150px;
+  }
+  .left-side a#main {
+    white-space: nowrap;
+    display: block;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 20px;
   }
 }
 @media (max-width: 1023px) {
   .left-side {
     font-size: 60px;
+  }
+  .left-side a#main {
+    width: 30%;
+    display: block;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 15px;
   }
 }
 
