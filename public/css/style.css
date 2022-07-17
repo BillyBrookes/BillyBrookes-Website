@@ -1,106 +1,139 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 body {
-  background-color: #e7ecef;
-  margin: auto;
+  background-color: #272932;
   overflow: hidden;
+  margin: auto;
 }
 
-.left-side {
-  background-color: #272932;
-  color: #e7ecef;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  font-family: Inter;
-}
-.left-side a#heading {
-  display: inline-block;
-  font-weight: 900;
-  width: 100%;
-  padding: 5px;
-}
-@media (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   .left-side {
-    font-size: 150px;
+    color: #e7ecef;
+    left: 0;
+    position: relative;
+    display: block;
+    height: 100%;
+    margin: 0;
+    font-family: Inter;
+    width: 20vw;
+    font-size: 8vw;
+  }
+  .left-side a#heading {
+    display: inline-block;
+    font-weight: 900;
+    width: 100%;
+    padding: 5px;
   }
   .left-side a#main {
     white-space: nowrap;
     display: block;
     padding: 10px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.25vw;
+  }
+  .right-side {
+    background-color: #e7ecef;
+    z-index: 1;
+    position: fixed;
+    color: #272932;
+    height: 100%;
+    font-family: Inter;
+    width: 100%;
+    left: 20vw;
+    animation: position 1.5s;
+    font-size: 8vw;
+  }
+  .right-side .container {
+    animation: opacity 2.5s;
+  }
+  .right-side a#heading {
+    display: inline-block;
+    font-weight: 900;
+    float: left;
+    padding: 5px;
+  }
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes position {
+    0% {
+      left: 0vw;
+    }
+    100% {
+      left: 20vw;
+    }
   }
 }
-@media (max-width: 1023px) {
+@media screen and (max-width: 599px) {
   .left-side {
-    font-size: 60px;
+    color: #e7ecef;
+    left: 0;
+    position: relative;
+    display: block;
+    height: 100%;
+    margin: 0;
+    font-family: Inter;
+    width: 20vw;
+    font-size: 15vw;
+  }
+  .left-side a#heading {
+    display: inline-block;
+    font-weight: 900;
+    width: 100%;
+    padding: 5px;
   }
   .left-side a#main {
-    width: 30%;
+    white-space: nowrap;
     display: block;
     padding: 10px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 2.125vw;
   }
-}
-
-.right-side {
-  background-color: #e7ecef;
-  z-index: 1;
-  right: 0;
-  position: fixed;
-  color: #272932;
-  height: 100%;
-  font-family: Inter;
-  animation: position 1.5s;
-}
-.right-side .container {
-  animation: opacity 2.5s;
-}
-.right-side a#heading {
-  display: inline-block;
-  font-weight: 900;
-  float: left;
-  padding: 5px;
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@media (min-width: 1024px) {
   .right-side {
-    width: 85%;
-    font-size: 150px;
+    background-color: #e7ecef;
+    z-index: 1;
+    position: fixed;
+    color: #272932;
+    height: 100%;
+    font-family: Inter;
+    width: 100%;
+    left: 35vw;
+    animation: position 1.5s;
+    font-size: 15vw;
+  }
+  .right-side .container {
+    animation: opacity 2.5s;
+  }
+  .right-side a#heading {
+    display: inline-block;
+    font-weight: 900;
+    float: left;
+    padding: 5px;
+  }
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @keyframes position {
     0% {
-      width: 100%;
+      left: 0vw;
     }
     100% {
-      width: 85%;
-    }
-  }
-}
-@media (max-width: 1023px) {
-  .right-side {
-    width: 63%;
-    font-size: 60px;
-  }
-  @keyframes position {
-    0% {
-      width: 100%;
-    }
-    100% {
-      width: 63%;
+      left: 35vw;
     }
   }
 }
