@@ -9,19 +9,19 @@ body {
   .left-side {
     color: #e7ecef;
     left: 0;
-    position: relative;
+    position: fixed;
     display: block;
     height: 100%;
     margin: 0;
     font-family: Inter;
     width: 20vw;
-    font-size: 8vw;
   }
   .left-side a#heading {
     display: inline-block;
     font-weight: 900;
     width: 100%;
     padding: 5px;
+    font-size: 8vw;
   }
   .left-side a#main {
     white-space: nowrap;
@@ -29,6 +29,26 @@ body {
     padding: 10px;
     font-weight: 500;
     font-size: 1.25vw;
+  }
+  .left-side .footer {
+    background-color: #43454e;
+    font-weight: 500;
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+    width: 20vw;
+    left: 0;
+    font-size: 1vw;
+  }
+  .left-side .footer img {
+    width: 1vw;
+  }
+  .left-side .footer a {
+    color: #e7ecef;
+    text-decoration: none;
+  }
+  .left-side .footer a:hover {
+    text-decoration: underline;
   }
   .right-side {
     background-color: #e7ecef;
@@ -38,9 +58,9 @@ body {
     height: 100%;
     font-family: Inter;
     width: 100%;
+    font-size: 8vw;
     left: 20vw;
     animation: position 1.5s;
-    font-size: 8vw;
   }
   .right-side .container {
     animation: opacity 2.5s;
@@ -48,8 +68,19 @@ body {
   .right-side a#heading {
     display: inline-block;
     font-weight: 900;
-    float: left;
+    width: 100%;
     padding: 5px;
+    float: left;
+  }
+  .right-side .content {
+    position: absolute;
+    font-weight: 500;
+    width: 78vw;
+    margin: 10px;
+    top: 10.125vw;
+  }
+  .right-side .content #main {
+    font-size: 1.25vw;
   }
   @keyframes opacity {
     0% {
@@ -75,13 +106,13 @@ body {
   .left-side {
     color: #e7ecef;
     left: 0;
-    position: relative;
+    position: fixed;
     display: block;
     height: 100%;
     margin: 0;
     font-family: Inter;
-    width: 20vw;
     font-size: 15vw;
+    width: 20vw;
   }
   .left-side a#heading {
     display: inline-block;
@@ -96,6 +127,26 @@ body {
     font-weight: 500;
     font-size: 2.125vw;
   }
+  .left-side .footer {
+    background-color: #43454e;
+    font-weight: 500;
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+    width: 35vw;
+    left: 0;
+    font-size: 3vw;
+  }
+  .left-side .footer img {
+    width: 3vw;
+  }
+  .left-side .footer a {
+    color: #e7ecef;
+    text-decoration: none;
+  }
+  .left-side .footer a:hover {
+    text-decoration: underline;
+  }
   .right-side {
     background-color: #e7ecef;
     z-index: 1;
@@ -106,7 +157,6 @@ body {
     width: 100%;
     left: 35vw;
     animation: position 1.5s;
-    font-size: 15vw;
   }
   .right-side .container {
     animation: opacity 2.5s;
@@ -114,8 +164,22 @@ body {
   .right-side a#heading {
     display: inline-block;
     font-weight: 900;
-    float: left;
+    width: 100%;
     padding: 5px;
+    font-size: 15vw;
+    float: left;
+  }
+  .right-side a#main {
+    font-size: 10px;
+  }
+  .right-side .content {
+    position: absolute;
+    width: 60vw;
+    margin: 10px;
+    top: 10.125vw;
+  }
+  .right-side .content #main {
+    font-size: 1.25vw;
   }
   @keyframes opacity {
     0% {
