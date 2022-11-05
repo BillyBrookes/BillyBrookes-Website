@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap')
+@import "mixins.sass"
+
+body
+    background-color: #272932
+    overflow: hidden
+    margin: auto
+
+// pc
+@media screen and (min-width: 600px)
+    .left-side
+        @include left()
+        width: 20vw
+        a#heading
+            @include heading()
+            font-size: 8vw
+        a#main
+            white-space: nowrap
+            display: block
+            padding: 10px
+            font-weight: 500
+            font-size: 1.25vw
+        .footer
+            background-color: #43454e
+            font-weight: 500
+            position: fixed
+            bottom: 0
+            padding: 5px
+            width: 20vw
+            left: 0
+            font-size: 1vw
+            img
+                width: 1vw
+            a
+                color: #e7ecef
+                text-decoration: none
+            a:hover
+                text-decoration: underline
+
+    .right-side
+        @include right()
+        font-size: 8vw
+        left: 20vw
+        animation: position 1.5s
+        .container
+            animation: opacity 2.5s
+            // right: 20vw
+        a#heading
+            @include heading()
+            float: left
+        .content
+            position: absolute
+            font-weight: 500
+            width: 78vw
+            margin: 10px
+            top: 10.125vw
+            #main
+                font-size: 1.25vw
+        @include anim-opacity()
+        @include anim-position(20vw)
+
+//mobile
+@media screen and (max-width: 599px)
+    .left-side
+        @include left()
+        font-size: 15vw
+        width: 20vw
+        a#heading
+            @include heading()
+        a#main
+            white-space: nowrap
+            display: block
+            padding: 10px
+            font-weight: 500
+            font-size: 2.125vw
+        .footer
+            background-color: #43454e
+            font-weight: 500
+            position: fixed
+            bottom: 0
+            padding: 5px
+            width: 35vw
+            left: 0
+            font-size: 3vw
+            img
+                width: 3vw
+            a
+                color: #e7ecef
+                text-decoration: none
+            a:hover
+                text-decoration: underline
+
+    .right-side
+        @include right()
+        left: 35vw
+        animation: position 1.5s
+        .container
+            animation: opacity 2.5s
+        a#heading
+            @include heading()
+            font-size: 15vw
+            float: left
+        a#main
+            font-size: 10px
+        .content
+            position: absolute
+            width: 60vw
+            margin: 10px
+            top: 10.125vw
+            #main
+                font-size: 1.25vw
+        @include anim-opacity()
+        @include anim-position(35vw)

@@ -1,203 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 body {
-  background-color: #272932;
+  height: 100vh;
+  background-image: url("../img/back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   margin: auto;
 }
 
-@media screen and (min-width: 600px) {
-  .left-side {
-    color: #e7ecef;
-    left: 0;
-    position: fixed;
-    display: block;
-    height: 100%;
-    margin: 0;
-    font-family: Inter;
-    width: 20vw;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.card {
+  width: 90%;
+  max-width: 660px;
+  text-align: center;
+  font-family: Inter;
+  color: #f4fffd;
+  padding: 50px, 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  animation: opacityanimation 1s;
+}
+@keyframes opacityanimation {
+  from {
+    opacity: 0;
   }
-  .left-side a#heading {
-    display: inline-block;
-    font-weight: 900;
-    width: 100%;
-    padding: 5px;
-    font-size: 8vw;
-  }
-  .left-side a#main {
-    white-space: nowrap;
-    display: block;
-    padding: 10px;
-    font-weight: 500;
-    font-size: 1.25vw;
-  }
-  .left-side .footer {
-    background-color: #43454e;
-    font-weight: 500;
-    position: fixed;
-    bottom: 0;
-    padding: 5px;
-    width: 20vw;
-    left: 0;
-    font-size: 1vw;
-  }
-  .left-side .footer img {
-    width: 1vw;
-  }
-  .left-side .footer a {
-    color: #e7ecef;
-    text-decoration: none;
-  }
-  .left-side .footer a:hover {
-    text-decoration: underline;
-  }
-  .right-side {
-    background-color: #e7ecef;
-    z-index: 1;
-    position: fixed;
-    color: #272932;
-    height: 100%;
-    font-family: Inter;
-    width: 100%;
-    font-size: 8vw;
-    left: 20vw;
-    animation: position 1.5s;
-  }
-  .right-side .container {
-    animation: opacity 2.5s;
-  }
-  .right-side a#heading {
-    display: inline-block;
-    font-weight: 900;
-    width: 100%;
-    padding: 5px;
-    float: left;
-  }
-  .right-side .content {
-    position: absolute;
-    font-weight: 500;
-    width: 78vw;
-    margin: 10px;
-    top: 10.125vw;
-  }
-  .right-side .content #main {
-    font-size: 1.25vw;
-  }
-  @keyframes opacity {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes position {
-    0% {
-      left: 0vw;
-    }
-    100% {
-      left: 20vw;
-    }
+  to {
+    opacity: 1;
   }
 }
-@media screen and (max-width: 599px) {
-  .left-side {
-    color: #e7ecef;
-    left: 0;
-    position: fixed;
-    display: block;
-    height: 100%;
-    margin: 0;
-    font-family: Inter;
-    font-size: 15vw;
-    width: 20vw;
-  }
-  .left-side a#heading {
-    display: inline-block;
-    font-weight: 900;
-    width: 100%;
-    padding: 5px;
-  }
-  .left-side a#main {
-    white-space: nowrap;
-    display: block;
-    padding: 10px;
-    font-weight: 500;
-    font-size: 2.125vw;
-  }
-  .left-side .footer {
-    background-color: #43454e;
-    font-weight: 500;
-    position: fixed;
-    bottom: 0;
-    padding: 5px;
-    width: 35vw;
-    left: 0;
-    font-size: 3vw;
-  }
-  .left-side .footer img {
-    width: 3vw;
-  }
-  .left-side .footer a {
-    color: #e7ecef;
-    text-decoration: none;
-  }
-  .left-side .footer a:hover {
-    text-decoration: underline;
-  }
-  .right-side {
-    background-color: #e7ecef;
-    z-index: 1;
-    position: fixed;
-    color: #272932;
-    height: 100%;
-    font-family: Inter;
-    width: 100%;
-    left: 35vw;
-    animation: position 1.5s;
-  }
-  .right-side .container {
-    animation: opacity 2.5s;
-  }
-  .right-side a#heading {
-    display: inline-block;
-    font-weight: 900;
-    width: 100%;
-    padding: 5px;
-    font-size: 15vw;
-    float: left;
-  }
-  .right-side a#main {
-    font-size: 10px;
-  }
-  .right-side .content {
-    position: absolute;
-    width: 60vw;
-    margin: 10px;
-    top: 10.125vw;
-  }
-  .right-side .content #main {
-    font-size: 1.25vw;
-  }
-  @keyframes opacity {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes position {
-    0% {
-      left: 0vw;
-    }
-    100% {
-      left: 35vw;
-    }
-  }
+.card img {
+  width: 250px;
+  margin-top: 2vh;
+}
+.card h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.card p {
+  font-size: 25px;
 }
