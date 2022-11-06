@@ -19,18 +19,21 @@ body {
 }
 
 .card {
+  position: absolute;
+  top: 25%;
   width: 90%;
   max-width: 660px;
   text-align: center;
   font-family: Inter;
-  color: #f4fffd;
+  color: rgba(59, 53, 97, 0.6);
   padding: 50px, 30px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  background-image: url("../img/noise.png");
 }
 .card img {
   width: 250px;
